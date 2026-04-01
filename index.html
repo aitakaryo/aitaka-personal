@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>愛鷹亮 | プロレスラー × パーソナルトレーナー</title>
+  <meta name="description" content="プロレスラー・愛鷹亮によるパーソナルトレーニング＆栄養指導。ダイエット・体型改善・体力強化まで完全サポート。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0ea5e9',
+              dark: '#1d4ed8',
+              navy: '#0f172a',
+              gold: '#f59e0b',
+            }
+          },
+          fontFamily: {
+            oswald: ['Oswald', 'sans-serif'],
+            noto: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+
+    /* ヒーローグラデーション */
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 50%, #0ea5e9 100%);
+    }
+
+    /* アニメーション */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .animate-fade-in-up { animation: fadeInUp 0.8s ease forwards; }
+    .animate-fade-in    { animation: fadeIn 1s ease forwards; }
+    .delay-200 { animation-delay: 0.2s; opacity: 0; }
+    .delay-400 { animation-delay: 0.4s; opacity: 0; }
+    .delay-600 { animation-delay: 0.6s; opacity: 0; }
+
+    /* カード hover */
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+    }
+
+    /* ストライプ装飾 */
+    .section-accent {
+      position: relative;
+    }
+    .section-accent::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(180deg, #0ea5e9, #1d4ed8);
+      border-radius: 2px;
+    }
+
+    /* ナビ固定 */
+    nav { backdrop-filter: blur(10px); }
+
+    /* Instagram ボタン pulse */
+    @keyframes pulse-blue {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,0.5); }
+      50%       { box-shadow: 0 0 0 12px rgba(14,165,233,0); }
+    }
+    .btn-instagram { animation: pulse-blue 2s infinite; }
+
+    /* プレースホルダー画像エリア */
+    .photo-placeholder {
+      background: linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-blue-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="font-oswald text-xl font-bold text-brand-dark tracking-wide">
+        愛鷹亮 <span class="text-brand-blue text-sm font-normal ml-1">PERSONAL TRAINER</span>
+      </div>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="bg-gradient-to-r from-brand-dark to-brand-blue text-white text-sm font-bold px-4 py-2 rounded-full hover:opacity-90 transition flex items-center gap-2">
+        <i class="fab fa-instagram"></i> 相談する
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero-bg min-h-screen flex items-center pt-16 relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-64 h-64 bg-sky-300 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <!-- テキスト -->
+      <div>
+        <p class="font-oswald text-brand-blue text-lg tracking-widest uppercase mb-2 animate-fade-in-up">
+          Pro Wrestler × Personal Trainer
+        </p>
+        <h1 class="font-oswald text-5xl md:text-6xl font-bold text-white leading-tight mb-6 animate-fade-in-up delay-200">
+          なりたい自分に、<br /><span class="text-brand-blue">なれる。</span>
+        </h1>
+        <p class="text-blue-100 text-lg leading-relaxed mb-8 animate-fade-in-up delay-400">
+          運動が苦手でも、忙しくても大丈夫。<br />
+          あなたのペースに合わせて、ダイエット・体力づくり・食事管理まで<strong class="text-white">一緒にサポートします。</strong>
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-600">
+          <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+            class="btn-instagram bg-white text-brand-dark font-bold text-lg px-8 py-4 rounded-full flex items-center justify-center gap-3 hover:bg-blue-50 transition">
+            <i class="fab fa-instagram text-pink-500 text-2xl"></i>
+            Instagramで今すぐ相談する
+          </a>
+        </div>
+        <p class="text-blue-200 text-sm mt-4 animate-fade-in-up delay-600">
+          <i class="fas fa-comment-dots mr-1"></i> まずはDMで気軽にどうぞ！無料相談受付中
+        </p>
+      </div>
+
+      <!-- プロフィール写真プレースホルダー -->
+      <div class="flex justify-center">
+        <div class="w-72 h-80 md:w-80 md:h-96 rounded-3xl shadow-2xl border-4 border-white/20 overflow-hidden">
+          <img src="profile.jpg" alt="愛鷹亮" class="w-full h-full object-cover object-top" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 下部の波 -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60L1440 60L1440 30C1200 60 960 0 720 20C480 40 240 0 0 30Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="font-oswald text-brand-blue uppercase tracking-widest text-sm mb-2">Trainer Profile</p>
+        <h2 class="font-oswald text-4xl font-bold text-gray-900">トレーナー経歴</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- 写真 -->
+        <div class="flex justify-center">
+          <div class="w-64 h-72 md:w-72 md:h-80 rounded-2xl shadow-xl overflow-hidden">
+            <img src="profile.jpg" alt="愛鷹亮 パーソナルトレーナー" class="w-full h-full object-cover object-top" />
+          </div>
+        </div>
+
+        <!-- テキスト -->
+        <div class="space-y-6">
+          <div class="section-accent pl-6">
+            <h3 class="font-oswald text-2xl font-bold text-brand-dark mb-2">格闘家・プロレスラーとしての経歴</h3>
+            <p class="text-gray-600 leading-relaxed">
+              <strong class="text-brand-dark">愛鷹亮</strong>は元警察官から格闘家へ転身。Bigbang・K-1で活躍し、<strong class="text-brand-dark">初代Bigbangヘビー級王者</strong>、
+              <strong class="text-brand-dark">2019年K-1ベストKO賞</strong>を獲得するなどトップファイターとして実績を残す。
+              その後プロレスラーに転向し、現在はフリーランスのプロレスラーとして活動中。
+            </p>
+          </div>
+
+          <div class="section-accent pl-6">
+            <h3 class="font-oswald text-2xl font-bold text-brand-dark mb-2">パーソナルトレーナーとして</h3>
+            <p class="text-gray-600 leading-relaxed">
+              警察官・格闘家・プロレスラーという唯一無二の競技人生で培った経験をもとに、
+              <strong class="text-brand-dark">愛鷹亮</strong>はパーソナルトレーナーとしても活動。本物の身体づくりを、あなたに伝えます。
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-blue-50 text-brand-dark text-sm font-bold px-4 py-2 rounded-full">
+              <i class="fas fa-medal mr-1 text-brand-gold"></i> 初代Bigbangヘビー級王者
+            </span>
+            <span class="bg-blue-50 text-brand-dark text-sm font-bold px-4 py-2 rounded-full">
+              <i class="fas fa-trophy mr-1 text-brand-gold"></i> 2019 K-1ベストKO賞
+            </span>
+            <span class="bg-blue-50 text-brand-dark text-sm font-bold px-4 py-2 rounded-full">
+              <i class="fas fa-shield-halved mr-1 text-brand-gold"></i> 元警察官
+            </span>
+            <span class="bg-blue-50 text-brand-dark text-sm font-bold px-4 py-2 rounded-full">
+              <i class="fas fa-person-running mr-1 text-brand-gold"></i> 現役プロレスラー
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="font-oswald text-brand-blue uppercase tracking-widest text-sm mb-2">Services</p>
+        <h2 class="font-oswald text-4xl font-bold text-gray-900">サービス内容</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-blue-100">
+          <div class="bg-gradient-to-r from-brand-dark to-brand-blue p-6">
+            <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-dumbbell text-white text-2xl"></i>
+            </div>
+            <h3 class="font-oswald text-2xl font-bold text-white">パーソナルトレーニング</h3>
+            <p class="text-blue-200 text-sm mt-1">Personal Training</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <p class="text-gray-600 leading-relaxed">
+              現役プロレスラーによるマンツーマン指導。あなたの目標・体力レベルに合わせた
+              完全オーダーメイドのプログラムで、着実に理想の身体へ近づけます。
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-brand-blue"></i> 完全マンツーマン対面指導</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-brand-blue"></i> 目標別オーダーメイドプログラム</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-brand-blue"></i> フォーム・姿勢の徹底チェック</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-brand-blue"></i> 継続サポート・進捗管理</li>
+            </ul>
+            <a href="service-training.html"
+              class="inline-flex items-center gap-2 mt-2 bg-white border-2 border-brand-blue text-brand-blue font-bold px-6 py-3 rounded-xl hover:bg-brand-blue hover:text-white transition">
+              詳細を見る <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- サービス2 -->
+        <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-blue-100">
+          <div class="bg-gradient-to-r from-sky-500 to-brand-blue p-6">
+            <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-apple-whole text-white text-2xl"></i>
+            </div>
+            <h3 class="font-oswald text-2xl font-bold text-white">栄養・食事指導</h3>
+            <p class="text-blue-200 text-sm mt-1">Nutrition Coaching</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <p class="text-gray-600 leading-relaxed">
+              プロアスリートが実践する食事メソッドをベースに、あなたのライフスタイルに合った
+              食事プランを提案。無理なく続けられる栄養管理で体づくりを加速します。
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-sky-500"></i> 個別食事プラン作成</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-sky-500"></i> PFCバランス・カロリー管理</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-sky-500"></i> 外食・コンビニ対応アドバイス</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-sky-500"></i> 継続的な食事改善サポート</li>
+            </ul>
+            <a href="service-nutrition.html"
+              class="inline-flex items-center gap-2 mt-2 bg-white border-2 border-sky-500 text-sky-500 font-bold px-6 py-3 rounded-xl hover:bg-sky-500 hover:text-white transition">
+              詳細を見る <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- サービス3：キックボクシング -->
+        <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-blue-100">
+          <div class="bg-gradient-to-r from-red-600 to-orange-500 p-6">
+            <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-hand-fist text-white text-2xl"></i>
+            </div>
+            <h3 class="font-oswald text-2xl font-bold text-white">キックボクシング ミット打ち</h3>
+            <p class="text-orange-100 text-sm mt-1">Kickboxing Mitt Work</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <p class="text-gray-600 leading-relaxed">
+              元K-1ファイター・愛鷹亮が直接ミットを持って指導。本格的なキックボクシングの技術を楽しみながら、全身を効率よく鍛えます。
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-orange-500"></i> 元K-1選手による本格ミット指導</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-orange-500"></i> パンチ・キックの基礎から応用まで</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-orange-500"></i> 全身有酸素運動でダイエット効果大</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-orange-500"></i> ストレス発散・体力向上にも最適</li>
+            </ul>
+            <a href="service-kickboxing.html"
+              class="inline-flex items-center gap-2 mt-2 bg-white border-2 border-orange-500 text-orange-500 font-bold px-6 py-3 rounded-xl hover:bg-orange-500 hover:text-white transition">
+              詳細を見る <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- サービス4：整体 -->
+        <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-blue-100">
+          <div class="bg-gradient-to-r from-emerald-600 to-teal-500 p-6">
+            <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-spa text-white text-2xl"></i>
+            </div>
+            <h3 class="font-oswald text-2xl font-bold text-white">整体</h3>
+            <p class="text-emerald-100 text-sm mt-1">Body Alignment</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <p class="text-gray-600 leading-relaxed">
+              長年の競技生活で培った身体の知識を活かした整体施術。姿勢改善・コリのケア・トレーニング効果を最大化するボディメンテナンスを提供します。
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-emerald-500"></i> 姿勢改善・骨格バランス調整</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-emerald-500"></i> 肩こり・腰痛・疲労回復</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-emerald-500"></i> トレーニング前後のコンディショニング</li>
+              <li class="flex items-center gap-2 text-gray-700"><i class="fas fa-check-circle text-emerald-500"></i> ケガ予防・パフォーマンス向上</li>
+            </ul>
+            <a href="service-bodywork.html"
+              class="inline-flex items-center gap-2 mt-2 bg-white border-2 border-emerald-500 text-emerald-500 font-bold px-6 py-3 rounded-xl hover:bg-emerald-500 hover:text-white transition">
+              詳細を見る <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-3 bg-gradient-to-r from-brand-dark to-brand-blue text-white font-bold text-lg px-10 py-4 rounded-full hover:opacity-90 transition shadow-lg">
+          <i class="fab fa-instagram"></i> サービスの詳細をInstagramで確認する
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TARGET ========== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="font-oswald text-brand-blue uppercase tracking-widest text-sm mb-2">For You</p>
+        <h2 class="font-oswald text-4xl font-bold text-gray-900">こんな方におすすめ</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- カード1 -->
+        <div class="card-hover bg-blue-50 rounded-2xl p-6 border border-blue-100">
+          <div class="w-14 h-14 bg-brand-blue rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-fire text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-2">ダイエットしたい</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">体重を落としたい、お腹を引き締めたい。正しい方法で無理なく理想の体型を目指しましょう。</p>
+        </div>
+
+        <!-- カード2 -->
+        <div class="card-hover bg-blue-50 rounded-2xl p-6 border border-blue-100">
+          <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-person-running text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-2">体型を改善したい</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">筋肉をつけてシェイプアップ。見た目も体力も変えたい方を全力でサポートします。</p>
+        </div>
+
+        <!-- カード3 -->
+        <div class="card-hover bg-blue-50 rounded-2xl p-6 border border-blue-100">
+          <div class="w-14 h-14 bg-sky-500 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-briefcase text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-2">ビジネスマンの体力づくり</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">仕事のパフォーマンスを上げたい。疲れにくい体、集中力の向上を目指すビジネスパーソンへ。</p>
+        </div>
+
+        <!-- カード4 -->
+        <div class="card-hover bg-blue-50 rounded-2xl p-6 border border-blue-100">
+          <div class="w-14 h-14 bg-brand-gold rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-utensils text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-2">食事を改善したい</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">何を食べればいいかわからない、食事を変えたいけど続かない。プロが食習慣から変えます。</p>
+        </div>
+
+        <!-- カード5 -->
+        <div class="card-hover bg-blue-50 rounded-2xl p-6 border border-blue-100">
+          <div class="w-14 h-14 bg-brand-blue rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-heart-pulse text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-2">健康維持・体力向上</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">年齢に負けない体を作りたい。健康寿命を延ばすためのトレーニングを始めましょう。</p>
+        </div>
+
+        <!-- カード6 -->
+        <div class="card-hover bg-blue-50 rounded-2xl p-6 border border-blue-100">
+          <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-shield-halved text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-2">初心者・運動が苦手な方</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">ジムが初めて、運動が苦手でも大丈夫。一から丁寧に指導するので安心してスタートできます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REASONS ========== -->
+  <section class="py-20 bg-gradient-to-b from-brand-navy to-blue-900 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="font-oswald text-brand-blue uppercase tracking-widest text-sm mb-2">Why Choose</p>
+        <h2 class="font-oswald text-4xl font-bold text-white">選ばれる3つの理由</h2>
+        <div class="w-16 h-1 bg-brand-blue mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-brand-blue/20 border-2 border-brand-blue rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-trophy text-brand-blue text-3xl"></i>
+          </div>
+          <div class="font-oswald text-5xl font-bold text-brand-blue mb-2">01</div>
+          <h3 class="font-bold text-xl text-white mb-3">現役プロの本物の知識</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">
+            プロレスラーとしてリングで鍛え続けてきたリアルな経験。教科書だけではなく、
+            自ら実践してきたトレーニングメソッドを伝えます。
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-brand-gold/20 border-2 border-brand-gold rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-user-gear text-brand-gold text-3xl"></i>
+          </div>
+          <div class="font-oswald text-5xl font-bold text-brand-gold mb-2">02</div>
+          <h3 class="font-bold text-xl text-white mb-3">完全個別対応プログラム</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">
+            あなたの体質・目標・生活習慣を徹底的にヒアリング。
+            一人ひとりに最適化された完全オーダーメイドのプランを提供します。
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-sky-500/20 border-2 border-sky-500 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-circle-nodes text-sky-500 text-3xl"></i>
+          </div>
+          <div class="font-oswald text-5xl font-bold text-sky-400 mb-2">03</div>
+          <h3 class="font-bold text-xl text-white mb-3">食事×運動の一貫サポート</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">
+            トレーニングだけで終わらない。栄養・食事指導もセットで、
+            生活全体から理想の体を作るトータルサポートを提供します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="font-oswald text-brand-blue uppercase tracking-widest text-sm mb-2">Pricing</p>
+        <h2 class="font-oswald text-4xl font-bold text-gray-900">料金プラン</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-4 rounded-full"></div>
+        <p class="text-gray-500 mt-4 text-sm">※料金の詳細はInstagramよりお問い合わせください</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- プラン0：体験 -->
+        <div class="card-hover border-2 border-blue-100 rounded-2xl p-6 text-center">
+          <div class="font-oswald text-lg font-bold text-brand-dark mb-1">トライアル</div>
+          <p class="text-gray-500 text-xs mb-4">Trial</p>
+          <div class="text-3xl font-bold text-brand-blue mb-1">¥<span>3,000</span></div>
+          <p class="text-gray-400 text-xs mb-5">体験セッション1回</p>
+          <ul class="text-gray-600 text-xs space-y-2 text-left mb-6">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 体験セッション1回</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> カウンセリング込み</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 食事アドバイス付き</li>
+          </ul>
+          <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+            class="block border-2 border-brand-blue text-brand-blue font-bold py-2 rounded-xl hover:bg-brand-blue hover:text-white transition text-sm">
+            申し込む
+          </a>
+        </div>
+
+        <!-- プラン1：単発 -->
+        <div class="card-hover border-2 border-blue-100 rounded-2xl p-6 text-center">
+          <div class="font-oswald text-lg font-bold text-brand-dark mb-1">単発</div>
+          <p class="text-gray-500 text-xs mb-4">Single Session</p>
+          <div class="text-3xl font-bold text-brand-blue mb-1">¥<span>8,000</span></div>
+          <p class="text-gray-400 text-xs mb-5">1回ごとの都度払い</p>
+          <ul class="text-gray-600 text-xs space-y-2 text-left mb-6">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> マンツーマン指導1回</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 目標・体力に合わせた指導</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 好きなタイミングで予約可</li>
+          </ul>
+          <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+            class="block border-2 border-brand-blue text-brand-blue font-bold py-2 rounded-xl hover:bg-brand-blue hover:text-white transition text-sm">
+            申し込む
+          </a>
+        </div>
+
+        <!-- プラン2（おすすめ） -->
+        <div class="card-hover bg-gradient-to-b from-brand-dark to-brand-blue rounded-2xl p-6 text-center relative shadow-2xl">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="bg-brand-gold text-white text-xs font-bold px-4 py-1 rounded-full shadow">人気 No.1</span>
+          </div>
+          <div class="font-oswald text-lg font-bold text-white mb-1">スタンダード</div>
+          <p class="text-blue-200 text-xs mb-4">Standard Plan</p>
+          <div class="text-3xl font-bold text-white mb-1">¥<span>24,000</span></div>
+          <p class="text-blue-200 text-xs mb-5">月4回セッション</p>
+          <ul class="text-blue-100 text-xs space-y-2 text-left mb-6">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> 月4回マンツーマン指導</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> 食事プラン作成</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> LINEサポート付き</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> 進捗管理・定期チェック</li>
+          </ul>
+          <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+            class="block bg-white text-brand-dark font-bold py-2 rounded-xl hover:bg-blue-50 transition text-sm">
+            申し込む
+          </a>
+        </div>
+
+        <!-- プラン3 -->
+        <div class="card-hover border-2 border-blue-100 rounded-2xl p-6 text-center">
+          <div class="font-oswald text-lg font-bold text-brand-dark mb-1">プレミアム</div>
+          <p class="text-gray-500 text-xs mb-4">Premium Plan</p>
+          <div class="text-3xl font-bold text-brand-blue mb-1">¥<span>40,000</span></div>
+          <p class="text-gray-400 text-xs mb-5">月8回セッション</p>
+          <ul class="text-gray-600 text-xs space-y-2 text-left mb-6">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 月8回マンツーマン指導</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 完全オーダーメイド食事管理</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 毎日LINEサポート</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-blue"></i> 優先予約・フルサポート</li>
+          </ul>
+          <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+            class="block border-2 border-brand-blue text-brand-blue font-bold py-2 rounded-xl hover:bg-brand-blue hover:text-white transition text-sm">
+            申し込む
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="py-20 bg-blue-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="font-oswald text-brand-blue uppercase tracking-widest text-sm mb-2">Testimonials</p>
+        <h2 class="font-oswald text-4xl font-bold text-gray-900">お客様の声</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- 声1 -->
+        <div class="card-hover bg-white rounded-2xl p-6 shadow-md border border-blue-100">
+          <div class="flex items-center gap-1 text-brand-gold mb-4">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">
+            「3ヶ月で体重が●kg減りました！食事指導も丁寧で、無理なく続けられました。愛鷹さんのパワフルな指導のおかげです！」
+            <!-- ★実際のお客様の声に差し替えてください★ -->
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+              <i class="fas fa-user text-brand-dark text-sm"></i>
+            </div>
+            <div>
+              <p class="font-bold text-sm text-gray-900">T.K様</p>
+              <p class="text-xs text-gray-400">30代・会社員（ダイエット目的）</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 声2 -->
+        <div class="card-hover bg-white rounded-2xl p-6 shadow-md border border-blue-100">
+          <div class="flex items-center gap-1 text-brand-gold mb-4">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">
+            「仕事が忙しくて運動できていなかったのですが、効率的なメニューを組んでもらい、体力が全然違います。仕事のパフォーマンスも上がりました！」
+            <!-- ★実際のお客様の声に差し替えてください★ -->
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+              <i class="fas fa-user text-brand-dark text-sm"></i>
+            </div>
+            <div>
+              <p class="font-bold text-sm text-gray-900">M.S様</p>
+              <p class="text-xs text-gray-400">40代・ビジネスマン</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 声3 -->
+        <div class="card-hover bg-white rounded-2xl p-6 shadow-md border border-blue-100">
+          <div class="flex items-center gap-1 text-brand-gold mb-4">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">
+            「運動が苦手で最初は不安でしたが、丁寧に教えてくれるので安心してトレーニングできました。食事も変えたらみるみる体型が変わってきました！」
+            <!-- ★実際のお客様の声に差し替えてください★ -->
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+              <i class="fas fa-user text-brand-dark text-sm"></i>
+            </div>
+            <div>
+              <p class="font-bold text-sm text-gray-900">A.Y様</p>
+              <p class="text-xs text-gray-400">20代・女性（体型改善）</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="py-24 hero-bg text-white text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-sky-300 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-2xl mx-auto px-6 relative z-10">
+      <p class="font-oswald text-brand-blue uppercase tracking-widest text-sm mb-3">Contact</p>
+      <h2 class="font-oswald text-4xl md:text-5xl font-bold text-white mb-5">
+        まずは気軽に<br />相談してください
+      </h2>
+      <p class="text-blue-100 text-lg leading-relaxed mb-10">
+        「何から始めればいい？」「自分に合ったメニューは？」<br />
+        どんな小さな疑問でも大歓迎。Instagramのフォロー＆DMからご連絡ください。
+      </p>
+
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="btn-instagram inline-flex items-center gap-4 bg-white text-brand-dark font-bold text-xl px-12 py-5 rounded-full hover:bg-blue-50 transition shadow-2xl">
+        <i class="fab fa-instagram text-pink-500 text-3xl"></i>
+        Instagramでフォロー＆DM
+      </a>
+
+      <p class="text-blue-200 text-sm mt-6">
+        <i class="fas fa-clock mr-1"></i> 無料相談受付中 ・ お気軽にどうぞ！
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-brand-navy text-white py-8">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="font-oswald text-2xl font-bold mb-1">愛鷹亮</div>
+      <p class="text-blue-400 text-sm mb-4">Pro Wrestler × Personal Trainer</p>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="inline-flex items-center gap-2 text-blue-300 hover:text-white transition text-sm">
+        <i class="fab fa-instagram"></i> @aitaka_personal.gym
+      </a>
+      <div class="border-t border-white/10 mt-6 pt-4">
+        <p class="text-blue-400 text-xs">© 2026 愛鷹亮 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>キックボクシング ミット打ち | 愛鷹亮</title>
+  <meta name="description" content="元K-1ファイター・愛鷹亮によるキックボクシングミット打ち指導。ダイエット・ストレス発散・本格格闘技を楽しく体験できます。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { blue: '#0ea5e9', dark: '#1d4ed8', navy: '#0f172a', gold: '#f59e0b' },
+            kick: { red: '#dc2626', orange: '#f97316' }
+          },
+          fontFamily: {
+            oswald: ['Oswald', 'sans-serif'],
+            noto: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #1a0000 0%, #dc2626 50%, #f97316 100%); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(220,38,38,0.15); }
+    @keyframes pulse-red {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.5); }
+      50%       { box-shadow: 0 0 0 12px rgba(249,115,22,0); }
+    }
+    .btn-pulse { animation: pulse-red 2s infinite; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-orange-100 shadow-sm backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-red-700 font-oswald font-bold text-lg hover:text-orange-500 transition">
+        <i class="fas fa-arrow-left text-sm"></i> 愛鷹亮 TOP
+      </a>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="bg-gradient-to-r from-red-600 to-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full hover:opacity-90 transition flex items-center gap-2">
+        <i class="fab fa-instagram"></i> 相談する
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg pt-28 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-10 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <p class="font-oswald text-orange-200 uppercase tracking-widest text-sm mb-3">Kickboxing Mitt Work</p>
+      <h1 class="font-oswald text-5xl md:text-6xl font-bold text-white mb-5">キックボクシング<br />ミット打ち</h1>
+      <p class="text-orange-100 text-lg leading-relaxed max-w-2xl mx-auto">
+        元K-1ファイター・2019年K-1ベストKO賞受賞の愛鷹亮が直接ミットを持って指導。<br />
+        楽しみながら本格的な格闘技と全身トレーニングを体験できます。
+      </p>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 40L1440 40L1440 20C1200 40 960 0 720 15C480 30 240 0 0 20Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- こんな方へ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">こんな方におすすめ</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-red-600 to-orange-500 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="flex items-start gap-3 bg-orange-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-orange-500 text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">楽しみながら体を動かしたい方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-orange-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-orange-500 text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">ダイエット・脂肪燃焼を効率よくしたい方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-orange-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-orange-500 text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">ストレス発散・気分転換をしたい方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-orange-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-orange-500 text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">格闘技・キックボクシングに挑戦してみたい方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-orange-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-orange-500 text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">体力・瞬発力・反射神経を鍛えたい方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-orange-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-orange-500 text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">護身術として格闘技を学びたい方</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 期待できる効果 -->
+  <section class="py-16 bg-orange-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">ミット打ちで得られる効果</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-red-600 to-orange-500 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-orange-100">
+          <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-fire text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">脂肪燃焼</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">全身を使う有酸素運動で効率よくカロリーを消費。ダイエットに効果的です。</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-orange-100">
+          <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-bolt text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">体力・瞬発力UP</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">パンチ・キックの動作で全身の筋力と瞬発力が鍛えられます。</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-orange-100">
+          <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-face-smile text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">ストレス発散</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">ミットを力強く打つ爽快感で、日々のストレスを思い切り発散できます。</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-orange-100">
+          <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-shield-halved text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">護身・自信づくり</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">打撃の基礎を身につけることで、自己防衛の意識と自信が生まれます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- セッションの流れ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">セッションの流れ</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-red-600 to-orange-500 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="space-y-6">
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">1</span>
+          </div>
+          <div class="bg-orange-50 rounded-2xl p-5 flex-1 border border-orange-100">
+            <h3 class="font-bold text-gray-900 text-lg mb-1"><i class="fas fa-comments mr-2 text-orange-500"></i>ヒアリング・目標確認</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">経験の有無・目標・体力レベルを確認。初心者でも安心してスタートできます。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">2</span>
+          </div>
+          <div class="bg-orange-50 rounded-2xl p-5 flex-1 border border-orange-100">
+            <h3 class="font-bold text-gray-900 text-lg mb-1"><i class="fas fa-person-running mr-2 text-orange-500"></i>ウォームアップ</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">ケガ予防のためのストレッチとシャドーボクシングで体を温めます。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">3</span>
+          </div>
+          <div class="bg-orange-50 rounded-2xl p-5 flex-1 border border-orange-100">
+            <h3 class="font-bold text-gray-900 text-lg mb-1"><i class="fas fa-hand-fist mr-2 text-orange-500"></i>ミット打ち指導</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">愛鷹亮が直接ミットを持ち、パンチ・キックのフォームから連続コンビネーションまで丁寧に指導します。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">4</span>
+          </div>
+          <div class="bg-orange-50 rounded-2xl p-5 flex-1 border border-orange-100">
+            <h3 class="font-bold text-gray-900 text-lg mb-1"><i class="fas fa-wind mr-2 text-orange-500"></i>クールダウン・フィードバック</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">ストレッチでクールダウン後、次回に向けてのフィードバックをお伝えします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="hero-bg py-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-xl mx-auto px-6 relative z-10">
+      <h2 class="font-oswald text-4xl font-bold text-white mb-4">まずは体験してみませんか？</h2>
+      <p class="text-orange-100 mb-8 leading-relaxed">初心者大歓迎。Instagramのフォロー＆DMからお気軽にご連絡ください。</p>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="btn-pulse inline-flex items-center gap-3 bg-white text-red-700 font-bold text-lg px-10 py-4 rounded-full hover:bg-orange-50 transition shadow-xl">
+        <i class="fab fa-instagram text-pink-500 text-2xl"></i> Instagramで今すぐ相談する
+      </a>
+      <p class="text-orange-200 text-sm mt-4"><i class="fas fa-clock mr-1"></i> 無料相談受付中</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-white py-6 text-center" style="background:#0f172a">
+    <a href="index.html" class="inline-flex items-center gap-2 text-blue-300 hover:text-white transition text-sm mb-2">
+      <i class="fas fa-arrow-left"></i> トップページに戻る
+    </a>
+    <div class="border-t border-white/10 mt-4 pt-3">
+      <p class="text-blue-400 text-xs">© 2026 愛鷹亮 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

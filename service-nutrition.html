@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>栄養・食事指導詳細 | 愛鷹亮</title>
+  <meta name="description" content="愛鷹亮の栄養・食事指導。プロアスリートのメソッドをベースに、あなたに合った食事プランを提案します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { blue: '#0ea5e9', dark: '#1d4ed8', navy: '#0f172a', gold: '#f59e0b' }
+          },
+          fontFamily: {
+            oswald: ['Oswald', 'sans-serif'],
+            noto: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #0ea5e9 60%, #38bdf8 100%); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(14,165,233,0.15); }
+    @keyframes pulse-blue {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,0.5); }
+      50%       { box-shadow: 0 0 0 12px rgba(14,165,233,0); }
+    }
+    .btn-pulse { animation: pulse-blue 2s infinite; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-blue-100 shadow-sm backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-brand-dark font-oswald font-bold text-lg hover:text-brand-blue transition">
+        <i class="fas fa-arrow-left text-sm"></i> 愛鷹亮 TOP
+      </a>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="bg-gradient-to-r from-brand-dark to-brand-blue text-white text-sm font-bold px-4 py-2 rounded-full hover:opacity-90 transition flex items-center gap-2">
+        <i class="fab fa-instagram"></i> 相談する
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg pt-28 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-10 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <p class="font-oswald text-white/70 uppercase tracking-widest text-sm mb-3">Nutrition Coaching</p>
+      <h1 class="font-oswald text-5xl md:text-6xl font-bold text-white mb-5">栄養・食事指導</h1>
+      <p class="text-blue-100 text-lg leading-relaxed max-w-2xl mx-auto">
+        プロアスリート・愛鷹亮が実践してきた食事メソッドをベースに、<br />
+        あなたのライフスタイルに合った食習慣を一緒につくります。
+      </p>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 40L1440 40L1440 20C1200 40 960 0 720 15C480 30 240 0 0 20Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 食事指導でできること -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">食事指導でできること</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div class="card-hover bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-scale-balanced text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">PFCバランス管理</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">タンパク質・脂質・炭水化物のバランスを最適化し、効率よく体を変えます。</p>
+        </div>
+        <div class="card-hover bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-12 h-12 bg-brand-dark rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-utensils text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">個別食事プラン作成</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">あなたの体質・目標・好みに合わせて、無理なく続けられる食事プランを作成します。</p>
+        </div>
+        <div class="card-hover bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-12 h-12 bg-sky-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-store text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">外食・コンビニ対応</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">外食が多い方やコンビニ中心の方にも対応。忙しい日常の中でも実践できるアドバイスを提供します。</p>
+        </div>
+        <div class="card-hover bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-12 h-12 bg-brand-gold rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-fire-flame-curved text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">カロリーコントロール</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">カロリーを細かく管理しすぎず、習慣として続けられる方法でコントロールします。</p>
+        </div>
+        <div class="card-hover bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-comments text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">継続サポート</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">LINEで随時相談・報告OK。食事の写真を送るだけでアドバイスをもらえます。</p>
+        </div>
+        <div class="card-hover bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-12 h-12 bg-brand-dark rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-trophy text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">プロの実践メソッド</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">現役プロレスラー・元格闘家として身体を極めた愛鷹亮が実際に実践してきた食事法を伝授します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 食事指導の流れ -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">食事指導の進め方</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="space-y-6">
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-sky-500 to-brand-blue rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">1</span>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-sm flex-1">
+            <h3 class="font-bold text-brand-dark text-lg mb-1"><i class="fas fa-clipboard mr-2 text-brand-blue"></i>現状ヒアリング</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">現在の食生活・好き嫌い・アレルギー・生活リズム・目標をヒアリング。今の状態を正確に把握します。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-sky-500 to-brand-blue rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">2</span>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-sm flex-1">
+            <h3 class="font-bold text-brand-dark text-lg mb-1"><i class="fas fa-list-check mr-2 text-brand-blue"></i>食事プラン作成</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">目標・体質・ライフスタイルに合わせて個別の食事プランを作成。無理のない範囲で実践できる内容にします。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-sky-500 to-brand-blue rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">3</span>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-sm flex-1">
+            <h3 class="font-bold text-brand-dark text-lg mb-1"><i class="fas fa-mobile-screen mr-2 text-brand-blue"></i>実践＆LINEサポート</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">日々の食事をLINEで報告。写真を送るだけでアドバイスをもらえるので、一人でも迷わず続けられます。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-sky-500 to-brand-blue rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">4</span>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-sm flex-1">
+            <h3 class="font-bold text-brand-dark text-lg mb-1"><i class="fas fa-rotate mr-2 text-brand-blue"></i>定期チェック・プラン調整</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">定期的に進捗を確認し、体の変化や生活の変化に合わせてプランを柔軟に調整します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- こんな方へ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">こんな方におすすめ</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="flex items-start gap-3 bg-blue-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-brand-blue text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">何を食べていいかわからない・食事に迷っている方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-blue-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-brand-blue text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">運動はしているのに体が変わらない方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-blue-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-brand-blue text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">ダイエット中の食事管理をサポートしてほしい方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-blue-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-brand-blue text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">外食・コンビニが多くて健康的な食生活に不安がある方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-blue-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-brand-blue text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">筋肉をつけながら体脂肪を落としたい方</p>
+        </div>
+        <div class="flex items-start gap-3 bg-blue-50 rounded-xl p-4">
+          <i class="fas fa-check-circle text-brand-blue text-xl mt-0.5 shrink-0"></i>
+          <p class="text-gray-700 text-sm">食事制限が続かない・リバウンドを繰り返している方</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-oswald text-3xl font-bold text-gray-900 mb-3">料金について</h2>
+      <div class="w-12 h-1 bg-gradient-to-r from-brand-blue to-brand-dark mx-auto mb-8 rounded-full"></div>
+      <div class="bg-white rounded-2xl shadow-md p-8 text-left space-y-4">
+        <p class="text-gray-600 leading-relaxed text-sm">栄養・食事指導はパーソナルトレーニングとのセットでのご提供が基本となります。料金はプランによって異なりますので、詳細はInstagramのDMよりお気軽にお問い合わせください。</p>
+        <div class="border-t pt-4 space-y-2">
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-gray-600">スタンダード（月4回）に含まれる</span>
+            <span class="font-bold text-brand-blue">¥24,000 / 月</span>
+          </div>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-gray-600">プレミアム（月8回）に含まれる</span>
+            <span class="font-bold text-brand-blue">¥40,000 / 月</span>
+          </div>
+        </div>
+        <p class="text-gray-400 text-xs">※単独での食事指導のご希望もInstagramよりご相談ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="hero-bg py-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-48 h-48 bg-sky-300 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-xl mx-auto px-6 relative z-10">
+      <h2 class="font-oswald text-4xl font-bold text-white mb-4">食事から変えれば<br />体は必ず変わる</h2>
+      <p class="text-blue-100 mb-8 leading-relaxed">まずはInstagramのDMで気軽にご相談ください。<br />どんな小さな疑問でも大歓迎です。</p>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="btn-pulse inline-flex items-center gap-3 bg-white text-brand-dark font-bold text-lg px-10 py-4 rounded-full hover:bg-blue-50 transition shadow-xl">
+        <i class="fab fa-instagram text-pink-500 text-2xl"></i> Instagramで今すぐ相談する
+      </a>
+      <p class="text-blue-200 text-sm mt-4"><i class="fas fa-clock mr-1"></i> 無料相談受付中</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-white py-6 text-center">
+    <a href="index.html" class="inline-flex items-center gap-2 text-blue-300 hover:text-white transition text-sm mb-2">
+      <i class="fas fa-arrow-left"></i> トップページに戻る
+    </a>
+    <div class="border-t border-white/10 mt-4 pt-3">
+      <p class="text-blue-400 text-xs">© 2026 愛鷹亮 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
