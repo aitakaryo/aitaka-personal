@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>出張パーソナルトレーニング | 愛鷹亮</title>
+  <meta name="description" content="愛鷹亮による出張パーソナルトレーニング。東京都内（相模原から車で約1時間以内）のご自宅・会社・レンタルジムへ出張。約90分・器具持参。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { blue: '#0ea5e9', dark: '#1d4ed8', navy: '#0f172a', gold: '#f59e0b' }
+          },
+          fontFamily: {
+            oswald: ['Oswald', 'sans-serif'],
+            noto: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #78350f 50%, #f59e0b 100%); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(245,158,11,0.2); }
+    @keyframes pulse-gold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0.5); }
+      50%       { box-shadow: 0 0 0 12px rgba(245,158,11,0); }
+    }
+    .btn-pulse { animation: pulse-gold 2s infinite; }
+    .faq-item input[type="checkbox"] { display: none; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item input[type="checkbox"]:checked ~ .faq-answer { max-height: 400px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item input[type="checkbox"]:checked ~ label .faq-icon { transform: rotate(45deg); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-amber-100 shadow-sm backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-brand-navy font-oswald font-bold text-lg hover:text-brand-gold transition">
+        <i class="fas fa-arrow-left text-sm"></i> 愛鷹亮 TOP
+      </a>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="bg-gradient-to-r from-brand-navy to-amber-700 text-white text-sm font-bold px-4 py-2 rounded-full hover:opacity-90 transition flex items-center gap-2">
+        <i class="fab fa-instagram"></i> 無料カウンセリングを申し込む
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg pt-28 pb-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-10 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-60 h-60 bg-amber-300 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div class="flex flex-wrap justify-center gap-2 mb-5">
+        <span class="bg-brand-gold text-white text-xs font-bold px-4 py-1.5 rounded-full"><i class="fas fa-car mr-1"></i> 東京都内・出張対応</span>
+        <span class="bg-white/20 text-white text-xs font-bold px-4 py-1.5 rounded-full"><i class="fas fa-clock mr-1"></i> 1セッション約90分</span>
+        <span class="bg-white/20 text-white text-xs font-bold px-4 py-1.5 rounded-full"><i class="fas fa-dumbbell mr-1"></i> 器具持参・準備不要</span>
+      </div>
+      <p class="font-oswald text-amber-300 uppercase tracking-widest text-sm mb-3">Mobile Personal Training</p>
+      <h1 class="font-oswald text-5xl md:text-6xl font-bold text-white mb-5">出張パーソナルトレーニング</h1>
+      <p class="text-amber-100 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+        ご自宅・会社・レンタルジムまで出張します。<br />
+        器具はすべてトレーナーが持参。準備はゼロでOKです。
+      </p>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="btn-pulse inline-flex items-center gap-3 bg-brand-gold text-white font-bold text-lg px-10 py-4 rounded-full hover:bg-amber-500 transition shadow-xl">
+        <i class="fab fa-instagram text-xl"></i> 無料カウンセリングを申し込む
+      </a>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 40L1440 40L1440 20C1200 40 960 0 720 15C480 30 240 0 0 20Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 出張可能な場所 -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">出張可能な場所</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-gold to-amber-600 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="card-hover bg-amber-50 rounded-2xl p-6 text-center border border-amber-100 shadow-sm">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-navy to-amber-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-house text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">自宅</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">リビングや部屋でOK。目安は2畳程度のスペースがあれば十分です。</p>
+        </div>
+        <div class="card-hover bg-amber-50 rounded-2xl p-6 text-center border border-amber-100 shadow-sm">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-navy to-amber-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-building text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">会社・オフィス</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">会議室や空きスペースを活用。昼休みや就業後でも対応します。</p>
+        </div>
+        <div class="card-hover bg-amber-50 rounded-2xl p-6 text-center border border-amber-100 shadow-sm">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-navy to-amber-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-dumbbell text-white text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">レンタルジム</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">お近くのレンタルジムでの本格マシントレーニングも可能です。</p>
+          <p class="text-amber-700 font-bold text-xs mt-2">※ジム利用料はお客様負担</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 器具・持ち物 -->
+  <section class="py-12 bg-brand-navy">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-brand-gold rounded-xl flex items-center justify-center">
+              <i class="fas fa-bag-shopping text-white"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg">トレーナーが持参するもの</h3>
+          </div>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-amber-100 text-sm"><i class="fas fa-check text-brand-gold"></i> レジスタンスバンド・ミニバンド</li>
+            <li class="flex items-center gap-2 text-amber-100 text-sm"><i class="fas fa-check text-brand-gold"></i> ヨガマット</li>
+            <li class="flex items-center gap-2 text-amber-100 text-sm"><i class="fas fa-check text-brand-gold"></i> ボクシングミット</li>
+            <li class="flex items-center gap-2 text-amber-100 text-sm"><i class="fas fa-check text-brand-gold"></i> ボクシンググローブ（貸出）</li>
+          </ul>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+              <i class="fas fa-person text-white"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg">お客様にご用意いただくもの</h3>
+          </div>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-amber-100 text-sm"><i class="fas fa-check text-brand-gold"></i> 動きやすい服装</li>
+            <li class="flex items-center gap-2 text-amber-100 text-sm"><i class="fas fa-check text-brand-gold"></i> タオル</li>
+            <li class="flex items-center gap-2 text-amber-100 text-sm"><i class="fas fa-check text-brand-gold"></i> 水・飲み物</li>
+          </ul>
+          <p class="text-amber-300 text-xs mt-4">※これだけでOK！器具の準備は一切不要です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 提供メニュー -->
+  <section class="py-16 bg-amber-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">提供メニュー</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-gold to-amber-600 mx-auto mt-3 rounded-full"></div>
+        <p class="text-gray-500 text-sm mt-3">目標や体力に合わせて組み合わせます。</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-amber-100">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-navy to-amber-700 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-dumbbell text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">筋トレ・ウェイトトレーニング</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">バンドを使った全身トレーニング。ダイエット・筋力アップ・体型改善に対応。</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-amber-100">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-navy to-amber-700 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-hand-fist text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">キックボクシング ミット打ち</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">元K-1ファイターが直接ミットを持って指導。全身有酸素・ストレス発散に最適。グローブは貸出。</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-amber-100">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-navy to-amber-700 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-person-rays text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">体幹・ストレッチ・姿勢改善</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">自重・バンドを使った体幹強化とストレッチ。腰痛・肩こり改善にも効果的。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 予約の流れ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">予約の流れ</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-gold to-amber-600 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="space-y-5">
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-brand-navy to-amber-700 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">1</span>
+          </div>
+          <div class="bg-amber-50 rounded-2xl p-5 flex-1 border border-amber-100">
+            <h3 class="font-bold text-gray-900 mb-1"><i class="fab fa-instagram mr-2 text-amber-600"></i>Instagram DMでご連絡</h3>
+            <p class="text-gray-600 text-sm">「出張トレーニングに興味があります」とメッセージをお送りください。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-brand-navy to-amber-700 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">2</span>
+          </div>
+          <div class="bg-amber-50 rounded-2xl p-5 flex-1 border border-amber-100">
+            <h3 class="font-bold text-gray-900 mb-1"><i class="fas fa-map-marker-alt mr-2 text-amber-600"></i>エリア・希望内容の確認</h3>
+            <p class="text-gray-600 text-sm">ご住所エリア・ご希望のメニュー・目標をお伝えください。対応可否をすぐにご回答します。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-brand-navy to-amber-700 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">3</span>
+          </div>
+          <div class="bg-amber-50 rounded-2xl p-5 flex-1 border border-amber-100">
+            <h3 class="font-bold text-gray-900 mb-1"><i class="fas fa-calendar-check mr-2 text-amber-600"></i>日程調整・確定</h3>
+            <p class="text-gray-600 text-sm">ご都合の良い日時を調整して確定します。</p>
+          </div>
+        </div>
+        <div class="flex gap-5 items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-brand-gold to-amber-500 rounded-full flex items-center justify-center shadow-lg">
+            <span class="font-oswald font-bold text-white text-lg">4</span>
+          </div>
+          <div class="bg-amber-50 rounded-2xl p-5 flex-1 border border-amber-200">
+            <h3 class="font-bold text-gray-900 mb-1"><i class="fas fa-star mr-2 text-amber-600"></i>当日スタート！</h3>
+            <p class="text-gray-600 text-sm">トレーナーが器具を持参してお伺いします。約90分のマンツーマン指導をお楽しみください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 対応エリア -->
+  <section class="py-16 bg-amber-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">対応エリア</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-gold to-amber-600 mx-auto mt-3 rounded-full"></div>
+        <p class="text-gray-500 text-sm mt-3">相模原から車で約1時間以内の東京都内が対象エリアです。</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-100">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-brand-navy to-amber-700 rounded-lg flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-white text-sm"></i>
+            </div>
+            <h3 class="font-bold text-gray-900">多摩地区（メイン）</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">町田市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">八王子市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">多摩市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">稲城市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">日野市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">調布市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">府中市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">国立市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">国分寺市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">立川市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">小平市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">東村山市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">武蔵野市（吉祥寺）</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">三鷹市</span>
+            <span class="bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full border border-amber-200">西東京市</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-100">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-brand-navy to-amber-700 rounded-lg flex items-center justify-center">
+              <i class="fas fa-city text-white text-sm"></i>
+            </div>
+            <h3 class="font-bold text-gray-900">23区（渋滞なし目安）</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">世田谷区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">目黒区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">渋谷区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">杉並区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">中野区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">新宿区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">品川区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">大田区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">港区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">練馬区</span>
+            <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">板橋区</span>
+          </div>
+          <p class="text-gray-400 text-xs mt-4"><i class="fas fa-info-circle mr-1"></i> 23区東側（足立・葛飾・江戸川など）は1時間超のため対象外</p>
+        </div>
+      </div>
+      <div class="mt-5 bg-white rounded-2xl p-5 border border-amber-200 flex items-start gap-3">
+        <i class="fas fa-comment-dots text-brand-gold text-xl mt-0.5 shrink-0"></i>
+        <p class="text-gray-600 text-sm leading-relaxed">上記エリア外の方も、まずはInstagramのDMでご相談ください。状況によって対応できる場合があります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">料金（出張費込み）</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-gold to-amber-600 mx-auto mt-3 rounded-full"></div>
+        <p class="text-gray-500 text-sm mt-3">通常料金に出張費 <strong class="text-amber-700">+¥8,000/回</strong> が含まれた金額です。</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6 mb-8">
+        <div class="text-center border-2 border-amber-200 rounded-2xl p-6 card-hover">
+          <div class="font-oswald text-lg font-bold text-gray-900 mb-0.5">単発</div>
+          <p class="text-gray-400 text-xs mb-3">Single Session</p>
+          <div class="text-4xl font-bold text-amber-700">¥16,000</div>
+          <p class="text-gray-400 text-xs mt-1">1回・約90分</p>
+          <div class="mt-3 text-xs text-gray-400 border-t border-amber-100 pt-3">通常¥8,000 + 出張費¥8,000</div>
+        </div>
+        <div class="text-center bg-gradient-to-b from-brand-navy to-amber-900 rounded-2xl p-6 relative shadow-xl card-hover">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="bg-brand-gold text-white text-xs font-bold px-3 py-0.5 rounded-full">人気 No.1</span>
+          </div>
+          <div class="font-oswald text-lg font-bold text-white mb-0.5">スタンダード</div>
+          <p class="text-amber-200 text-xs mb-3">Standard</p>
+          <div class="text-4xl font-bold text-white">¥56,000</div>
+          <p class="text-amber-200 text-xs mt-1">月額・月4回・約90分×4</p>
+          <div class="mt-3 text-xs text-amber-300 border-t border-amber-700 pt-3">通常¥24,000 + 出張費¥8,000×4</div>
+        </div>
+        <div class="text-center border-2 border-amber-200 rounded-2xl p-6 card-hover">
+          <div class="font-oswald text-lg font-bold text-gray-900 mb-0.5">プレミアム</div>
+          <p class="text-gray-400 text-xs mb-3">Premium</p>
+          <div class="text-4xl font-bold text-amber-700">¥104,000</div>
+          <p class="text-gray-400 text-xs mt-1">月額・月8回・約90分×8</p>
+          <div class="mt-3 text-xs text-gray-400 border-t border-amber-100 pt-3">通常¥40,000 + 出張費¥8,000×8</div>
+        </div>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-amber-100 shadow-sm">
+        <table class="w-full text-sm" style="min-width:480px">
+          <thead>
+            <tr class="bg-amber-50 border-b border-amber-100">
+              <th class="text-left px-5 py-3 text-gray-500 font-bold">プラン</th>
+              <th class="text-center px-4 py-3 text-gray-500 font-bold">通常料金</th>
+              <th class="text-center px-4 py-3 text-amber-700 font-bold">出張料金（+¥8,000/回）</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-amber-50">
+            <tr class="hover:bg-amber-50/50">
+              <td class="px-5 py-3 font-bold text-gray-700">単発（1回・約90分）</td>
+              <td class="text-center px-4 py-3 text-gray-500">¥8,000</td>
+              <td class="text-center px-4 py-3 text-amber-700 font-bold">¥16,000</td>
+            </tr>
+            <tr class="hover:bg-amber-50/50">
+              <td class="px-5 py-3 font-bold text-gray-700">スタンダード（月4回）</td>
+              <td class="text-center px-4 py-3 text-gray-500">¥24,000</td>
+              <td class="text-center px-4 py-3 text-amber-700 font-bold">¥56,000</td>
+            </tr>
+            <tr class="hover:bg-amber-50/50">
+              <td class="px-5 py-3 font-bold text-gray-700">プレミアム（月8回）</td>
+              <td class="text-center px-4 py-3 text-gray-500">¥40,000</td>
+              <td class="text-center px-4 py-3 text-amber-700 font-bold">¥104,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-amber-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="font-oswald text-amber-600 uppercase tracking-widest text-sm mb-2">FAQ</p>
+        <h2 class="font-oswald text-3xl font-bold text-gray-900">よくある質問</h2>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-gold to-amber-600 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="space-y-3">
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden">
+          <input type="checkbox" id="faq1" />
+          <label for="faq1" class="flex items-center justify-between px-6 py-4 cursor-pointer select-none">
+            <span class="font-bold text-gray-900 text-sm">Q. 器具は必要ですか？</span>
+            <i class="fas fa-plus faq-icon text-amber-600 shrink-0 ml-3"></i>
+          </label>
+          <div class="faq-answer">
+            <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">器具はすべてトレーナーが持参します（バンド・マット・ミット・グローブ）。お客様にご用意いただくのは動きやすい服装・タオル・水のみです。</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden">
+          <input type="checkbox" id="faq2" />
+          <label for="faq2" class="flex items-center justify-between px-6 py-4 cursor-pointer select-none">
+            <span class="font-bold text-gray-900 text-sm">Q. 駐車場・レンタルジム代はどうなりますか？</span>
+            <i class="fas fa-plus faq-icon text-amber-600 shrink-0 ml-3"></i>
+          </label>
+          <div class="faq-answer">
+            <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">出張費（¥8,000/回）の中に交通費が含まれています。<br /><br /><strong class="text-gray-800">【駐車場について】</strong><br />駐車スペースをご用意いただける場合はご案内ください。ない場合は近くのコインパーキングを利用しますので、<strong class="text-amber-700">駐車場代はお客様にご負担いただきます。</strong><br /><br /><strong class="text-gray-800">【レンタルジムご利用の場合】</strong><br /><strong class="text-amber-700">ジム利用料はお客様のご負担</strong>となります。</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden">
+          <input type="checkbox" id="faq3" />
+          <label for="faq3" class="flex items-center justify-between px-6 py-4 cursor-pointer select-none">
+            <span class="font-bold text-gray-900 text-sm">Q. 集合住宅・マンションでもトレーニングできますか？</span>
+            <i class="fas fa-plus faq-icon text-amber-600 shrink-0 ml-3"></i>
+          </label>
+          <div class="faq-answer">
+            <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">対応可能です。バンドやマットを使ったトレーニングが中心のため、ジャンプなど大きな衝撃を伴う動きは避けて指導します。管理規約や近隣への配慮も行います。</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden">
+          <input type="checkbox" id="faq4" />
+          <label for="faq4" class="flex items-center justify-between px-6 py-4 cursor-pointer select-none">
+            <span class="font-bold text-gray-900 text-sm">Q. キャンセルポリシーを教えてください。</span>
+            <i class="fas fa-plus faq-icon text-amber-600 shrink-0 ml-3"></i>
+          </label>
+          <div class="faq-answer">
+            <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">遠方からの出張のため、以下のキャンセルポリシーをご確認ください。<br />・<strong>前日までのキャンセル：</strong>料金の50%<br />・<strong>当日のキャンセル：</strong>料金の100%<br /><br />体調不良など緊急の場合はご相談ください。</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden">
+          <input type="checkbox" id="faq5" />
+          <label for="faq5" class="flex items-center justify-between px-6 py-4 cursor-pointer select-none">
+            <span class="font-bold text-gray-900 text-sm">Q. 対応エリア外でも相談できますか？</span>
+            <i class="fas fa-plus faq-icon text-amber-600 shrink-0 ml-3"></i>
+          </label>
+          <div class="faq-answer">
+            <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">はい、まずはInstagramのDMでご相談ください。距離・状況によっては対応できる場合がございます。お気軽にメッセージをお送りください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="hero-bg py-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-xl mx-auto px-6 relative z-10">
+      <p class="font-oswald text-amber-300 uppercase tracking-widest text-sm mb-3">Contact</p>
+      <h2 class="font-oswald text-4xl font-bold text-white mb-4">まずは無料で<br />相談してみてください</h2>
+      <p class="text-amber-100 mb-8 leading-relaxed">エリア確認・日程調整・メニューのご質問など<br />どんなことでもお気軽にどうぞ。</p>
+      <a href="https://www.instagram.com/aitaka_personal.gym?igsh=MWlicnhiZXRyeDBkaA%3D%3D&utm_source=qr" target="_blank" rel="noopener"
+        class="btn-pulse inline-flex items-center gap-3 bg-white text-brand-navy font-bold text-lg px-10 py-4 rounded-full hover:bg-amber-50 transition shadow-xl">
+        <i class="fab fa-instagram text-pink-500 text-2xl"></i> 無料カウンセリングを申し込む
+      </a>
+      <p class="text-amber-200 text-sm mt-4"><i class="fas fa-clock mr-1"></i> 無料相談受付中</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-white py-6 text-center" style="background:#0f172a">
+    <a href="index.html" class="inline-flex items-center gap-2 text-blue-300 hover:text-white transition text-sm mb-2">
+      <i class="fas fa-arrow-left"></i> トップページに戻る
+    </a>
+    <div class="border-t border-white/10 mt-4 pt-3">
+      <p class="text-blue-400 text-xs">© 2026 愛鷹亮 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
